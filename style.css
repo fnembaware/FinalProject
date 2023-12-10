@@ -30,61 +30,45 @@ nav a {
     color: #ecf0f1;
 }
 
-section {
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
     padding: 2em;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#about-us {
-    background-color: #ecf0f1; /* Clouds */
-}
-
-#about-us h2 {
-    color: #2c3e50; /* Midnight Blue */
-}
-
-#highlights {
-    background-color: #f5f5f5; /* Silver */
-}
-
-#highlights h2 {
-    color: #2c3e50; /* Midnight Blue */
-    text-align: center;
-}
-
-.highlight {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns for text and image */
-    gap: 20px; /* Adjust the gap as needed for spacing */
-    margin-bottom: 2em;
-    padding: 1em;
-    border: 1px solid #ddd; /* Optional: Add a border for a more structured look */
+.event-container {
+    border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden; /* Clear the float */
+    margin-bottom: 20px;
+    flex: 1;
+    max-width: 400px; /* Adjust the maximum width as needed */
     background-color: #fff; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
 }
 
-.highlight-content {
+.event-container h3 {
+    background-color: #3498db; /* Blue */
+    color: #fff;
+    margin: 0;
     padding: 10px;
 }
 
-.highlight h3 {
-    color: #2c3e50; /* Midnight Blue */
+.event-image {
+    flex: 1;
 }
 
-.highlight p {
-    margin-bottom: 1em;
-    color: #333;
-}
-
-.highlight img {
-    max-width: 100%;
+.event-image img {
+    width: 100%;
     height: auto;
-    border-radius: 8px; /* Optional: Add a border-radius for rounded corners */
+    border-radius: 8px 0 0 8px; /* Optional: Add a border-radius for rounded corners */
+}
+
+.event-details {
+    flex: 2;
+    padding: 10px;
 }
 
 footer {
@@ -92,4 +76,65 @@ footer {
     color: #ecf0f1;
     text-align: center;
     padding: 1em 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light Gray background */
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2em;
+}
+
+.event-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Clear the float */
+    margin-bottom: 20px;
+    flex: 1;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    background-color: #fff; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: transform 0.3s ease-in-out; /* Add a transition effect */
+}
+
+.event-container:hover {
+    transform: scale(1.05); /* Add a scale effect on hover */
+}
+
+.event-container h3 {
+    background-color: #3498db; /* Blue */
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+}
+
+.event-details {
+    flex: 2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2ecc71; /* Emerald Green */
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px; /* Add some space between the text and button */
+}
+
+.cta-button:hover {
+    background-color: #27ae60; /* Darker Green on hover */
 }
